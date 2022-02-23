@@ -21,6 +21,16 @@ export default class ChromeBoisDomain extends Component {
    * listener that should fire it!
    */
    
+  keyHandler = (event) => {
+    switch (event.key) {
+      case "a":
+        resize("+");
+        break;
+      case "s":
+        resize("-");
+        break;
+    }
+  };
   /* TODO: Add an event listener to the `<canvas>` element to capture when a key
   /* is pressed. When a key is pressed, an event handler should invoke the
   /* provided `resize` function with a single argument of either '+' or '-'
